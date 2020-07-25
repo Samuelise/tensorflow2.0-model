@@ -1,5 +1,7 @@
 ################神经网络模型--Unet网络测试#################
 
+# -*-coding: utf-8 -*-
+
 #输入格式 [b,h,w,cin]  (数量，size，通道数)
 #卷积核格式 [k,k,cin,cout]  (size，通道数， 核数量)
 
@@ -11,6 +13,12 @@ import random
 import numpy as np
 import os
 from sklearn.preprocessing import LabelEncoder  
+
+from tensorflow_examples.models.pix2pix import pix2pix
+from IPython.display import clear_output
+
+from PIL import Image 
+
 
 
 filepath='data/Unet/unet_train/'
@@ -140,7 +148,7 @@ if __name__ == "__main__":
     
     generate_traindata=generateData(1,train_set)       #获取train迭代数据
     
-    display(generate_traindata)  #显示
+    #display(generate_traindata)  #显示
 
 
 
