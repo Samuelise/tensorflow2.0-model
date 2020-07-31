@@ -41,7 +41,7 @@ def load_ann_from_file(img_file):
 #加载图片并转换为训练集和验证集，同时输出训练集、验证集样本数量
 def load(img_path):
     trainImageList = []
-    path = img_path + "/ann"
+    path = img_path + "/image"
     files = os.listdir(path)
     cnt = 0
     for imgFile in files:
@@ -58,7 +58,7 @@ def load(img_path):
             break
  
     trainAnnList = []
-    path = img_path + "/images"
+    path = img_path + "/ann"
     files = os.listdir(path)
     cnt = 0
     for imgFile in files:
